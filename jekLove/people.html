@@ -1,0 +1,96 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>VELOVE</title>
+
+    <meta name="description" content="Bike club for the students of Zurich">
+
+    <meta name="author" content="VELOVE">
+
+    <meta name="keywords" content="velove, velowerkstatt, ETH Zurich, VSETH" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+    <link rel="stylesheet" href="css/styles.css?version=1.1">
+    <link rel="stylesheet" href="css/styles_people.css?version=1.2">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRacing+Sans+One" rel="stylesheet">
+    <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+
+
+
+
+
+<body>
+
+{% include templates/headers.html %}
+
+
+<section>
+
+
+    <h1>Board members of VELOVE</h1>
+
+    <img src="./img/boarMembers.jpg" alt="The board members all together" height="60%">
+
+    <br>
+    Click (or tap) on the person to see their bike, and on the description to see their duties.
+
+
+    <br><br>
+
+    {% for board_member in site.board_members %}
+        <div class="person">
+
+            <figure class="person-bike-checkbox-content" style="max-height:280px">
+                <input type="checkbox" name="person-bike-checkbox" id="person-bike-checkbox-{{ board_member.name }}">
+                <img class="person-image-for-checkbox" src="{{board_member.portrait}}" alt="{{ board_member.name }} Portrait">
+                <img class="bike-image-for-checkbox" src="{{board_member.bike}}" alt="{{ board_member.name }} Bike">
+                <label for="person-bike-checkbox-{{ board_member.name }}" class="person-bike-checkbox-label"></label>
+            </figure>
+
+            <span class="person-name">{{ board_member.name }}</span>
+            <span class="person-role">{{ board_member.position }}</span>
+            <span class="person-email">
+                <a class="email-as-envelope" href="mailto:{{ board_member.email }}">
+                    <img src="img/envelope_white_background.png" alt="{{ board_member.name }}">
+                </a>
+            </span>
+            <span class="person-description">
+
+            </span>
+            <span class="person-description-two">
+                <input type="checkbox" name="person-description-checkbox" id="person-description-checkbox-{{ board_member.name }}">
+                <span class="person-description-fun">
+                    {{ board_member.content }}<br><br>
+                </span>
+                <span class="person-description-serious">
+                    {{ board_member.content }}
+                </span>
+                <label for="person-description-checkbox-{{ board_member.name }}" class="person-description-checkbox-label"></label>
+            </span>
+
+        </div>
+    {% endfor %}
+
+
+
+
+
+</section>
+
+{% include templates/footers.html %}
+
+</body>
+
+</html>
+

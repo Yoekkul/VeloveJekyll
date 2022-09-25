@@ -1,0 +1,255 @@
+/* ATTEMPT AT A PERSON BIKE FIGURE */
+.personbikefigure {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.personbikefigure>.personimage {
+	display: block;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #021a40;
+}
+
+.personbikefigure>.bikeimage {
+	display: none;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #021a40;
+}
+
+
+.personbikefigure:active>.bikeimage {
+	display: block;
+}
+
+.personbikefigure:active>.personimage {
+	display: none;
+}
+
+
+
+
+
+
+/* PERSON AND THEIR DETAILS */
+
+.person {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	max-width: 45%;
+	/*max-width: 360px;*/
+	width: 45%;
+	border: 1px solid black;
+}
+
+.person-name {
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: 150%;
+	font-weight: 300;
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+
+.person-role {
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: 100%;
+	color: grey;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.person-email {
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.email-as-envelope>img {
+	width: 25px;
+}
+
+.person-description {
+	display: block;
+	position: relative;
+	text-align: justify;
+}
+
+
+/* PERSON-BIKE FIGURE USING CHECKBOX */
+
+.person-bike-checkbox-content input[name="person-bike-checkbox"] {
+	display: none;
+}
+
+
+.person-bike-checkbox-content {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*max-width: 360px;*/
+	/*max-height: 240px;*/
+	margin: 0 auto;
+	overflow: hidden;
+	/*border:1px solid red;*/
+}
+
+
+/* It is important that the first image is positioned as "relative" */
+/* > This ensure that the parent "person-bike-checkbox-content" can */
+/*   can be rendered with a non-zero height                         */
+.person-bike-checkbox-content>.person-image-for-checkbox {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*border:1px solid #021a40;*/
+}
+
+.person-bike-checkbox-content>.bike-image-for-checkbox {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	/*border:1px solid #021a40;*/
+	transition: 0.4s cubic-bezier(0.865, 0.140, 0.095, 0.870);
+}
+
+/* Position the label over the top of everything*/
+.person-bike-checkbox-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*border:1px solid #021a40;*/
+}
+
+
+.person-bike-checkbox-content input[name="person-bike-checkbox"]:checked~.bike-image-for-checkbox {
+	left: 0px;
+}
+
+
+
+
+
+.person-description-two {
+	display: block;
+	position: relative;
+	text-align: justify;
+	width: 100%;
+}
+
+.person-description-two input[name="person-description-checkbox"] {
+	display: none;
+}
+
+
+.person-description-two>.person-description-fun {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*border:1px solid #021a40;*/
+	opacity: 1.0;
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+.person-description-two>.person-description-serious {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*border:1px solid #021a40;*/
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+	/*transition-delay: 1s;*/
+	/*transition: 0.4s cubic-bezier(0.865, 0.140, 0.095, 0.870);*/
+}
+
+/* Position the label over the top of everything*/
+.person-description-checkbox-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*border:1px solid #021a40;*/
+}
+
+
+.person-description-two input[name="person-description-checkbox"]:checked~.person-description-fun {
+	opacity: 0.0;
+}
+
+.person-description-two input[name="person-description-checkbox"]:checked~.person-description-serious {
+	opacity: 1.0;
+}
+
+
+
+/* ATTEMPT AT AN EMBEDDED CALENDAR */
+.embedded-calendar {
+	position: relative;
+	height: 600px;
+	width: 100%;
+	max-width: 600px;
+	overflow: hidden;
+}
+
+.embedded-calendar>iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+
+	.personbikefigure:hover>.bikeimage {
+		display: block;
+	}
+
+	.personbikefigure:hover>.personimage {
+		display: none;
+	}
+
+	.person {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+}

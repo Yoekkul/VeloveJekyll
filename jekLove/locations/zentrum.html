@@ -1,0 +1,94 @@
+---
+---
+<!doctype html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>VELOVE</title>
+
+    <meta name="description" content="Bike club for the students of Zurich">
+
+    <meta name="author" content="VELOVE">
+
+    <meta name="keywords" content="velove, velowerkstatt, ETH Zurich, VSETH" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+    <link rel="stylesheet" href="../css/styles.css?version=1.1">
+    <link rel="stylesheet" href="../css/styles_accordian_simple.css?version=1.2">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRacing+Sans+One" rel="stylesheet">
+    <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <style>
+         body{
+            background: #f0f0c0;
+        }
+        
+        header {
+            background: #f0f0c0;
+            border-bottom: 4px solid #7d4eb2;
+        }
+
+        h2{
+            color: #7d4eb2;
+        }
+
+        #title {
+            font-family: Racing Sans One, Helvetica, Arial;
+            text-decoration: none;
+            font-size: 500%;
+            color: #7d4eb2;
+        }
+
+        .locations{
+            background: #f2f2d9;
+        }
+        #menu-icon{
+            background: #7d4eb2 url(../img/menu-icon.png) center
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    {% include templates/headers.html %}
+
+<section>
+    <div class="locations">
+        <h2> UZH Zentrum</h2>
+        <p>
+            You can find us at <a href="https://goo.gl/maps/zh6Z3QT8hWGcQSEU6">Rämistrasse 66</a> <br>
+            Check at the second door on the ground floor, we are right in the hallway
+
+
+        <table id="openinghours">
+            <tr><td>Tuesday</td><td>15:00-18:00</td></tr>
+            <tr><td>Thursday</td><td>15:00-18:00</td></tr>
+        </table>
+
+        Unexpected opening and closing times are always posted on our <a href="https://www.instagram.com/veloveuzh/">VELOVE UZH instagram</a>
+        </p>
+
+    </div>
+    
+    <br>
+    <br>
+    <img src="../img/workshop/veloveZentrum.jpg" style="max-width:50%; display: block; margin-left: auto; margin-right: auto;">
+
+
+</section>
+
+{% include templates/footers.html %}
+
+
+</body>

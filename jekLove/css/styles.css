@@ -1,0 +1,643 @@
+/*RESET*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*MAIN*/
+body {
+    font-size: 1.0em;
+    line-height: 1.25em;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial;
+    background: #f9f9f9;
+    color: #555;
+}
+
+a {
+    color: #4C9CF1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #444;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #4C9CF1;
+    z-index: 100;
+}
+
+/* General text syles */
+h1 {
+    font-size: 10em;
+    font-weight: normal;
+    font-family: Racing Sans One, Helvetica, Arial;
+}
+
+p {
+    line-height: 1.45em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 800;
+    font-family: Racing Sans One, Helvetica, Arial;
+}
+
+
+/* GENERAL UNLABELLED LIST SETTINGS */
+/*ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+    padding: 0;
+}*/
+
+/*li a {
+	display: block;
+	padding: 0.5em 0.5em 0.5em 1.0em;
+	text-decoration: none;
+}*/
+
+/* Change the link color on hover */
+/*li a:hover {
+    background-color: #2262AD;
+    color: white;
+}*/
+
+/* The sponsors tab lies above the footer, it displays a list of our sponsors*/
+#sponsors {
+    border-top: 1px solid lightgray;
+}
+
+/*#sponsors img:hover{*/
+/*	border: 1px solid red;*/
+/*}*/
+
+/* The footer at the end of every page (Impressum, contact etc)*/
+#footer {
+    padding: 0;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    font-size: 60%;
+    text-align: center;
+    clear: both;
+    /*background: url(../img/vseth_Logo_bylines_organisation.png) right*/
+    /*background-size: 140px 50px;*/
+    /*background-repeat: no-repeat;*/
+    /*padding-right: 140px;*/
+}
+
+#footer span {
+    margin: 0.5em 2em;
+    display: inline-block;
+}
+
+/* Triangle bullets for lists */
+section ul {
+    list-style: none;
+}
+
+
+section ul li {
+    margin: 2px 10px 2px 25px;
+}
+
+section ul li:before {
+    content: '';
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+/* velowerkstatt page specific stuff */
+
+#howtolist ul li {
+    margin: 0 20px 20px 20px;
+    vertical-align: top
+}
+
+#howtolist {
+    border: 1px solid #4C9CF1;
+    padding: 1em;
+}
+
+#openinghours {
+    border-collapse: separate;
+    border-spacing: 10px 3px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#rentalTable {
+
+    min-width: 30%;
+    border: 1px solid #0f0f0f;
+    border-spacing: 10px 3px;
+    /*padding: 10px 20px;*/
+    font-weight: bold;
+}
+
+#rentalTable th,
+td {
+    padding: 5px;
+}
+
+#rentalTable th {
+    border: 1px solid #0f0f0f;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/*
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+*/
+
+/*#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/logo.png) no-repeat center;
+	display: block;
+}*/
+
+#logo {
+    float: left;
+    display: block;
+    padding-left: 10%;
+    padding-right: 0%;
+    width: 70%;
+    margin: 20px 20px 0px 20px;
+}
+
+#title-logo {
+    width: 30px;
+}
+
+#title {
+
+    font-family: Racing Sans One, Helvetica, Arial;
+    text-decoration: none;
+    font-size: 500%;
+    color: #4C9CF1;
+
+}
+
+#subtitle {
+    font-family: Racing Sans One, Helvetica, Arial;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+/* THE MENU NAVIGATION - Location of menu icon and appearance of the menu items */
+.menu-nav {
+    float: right;
+    padding: 20px;
+}
+
+.menu-nav>ul {
+    /*list-style: none;*/
+    list-style-type: none;
+    background-color: #258;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-nav>ul>li a {
+    /* This make the menu list items "full width" */
+    display: block;
+    /* Put here the padding around each menu list item */
+    padding: 0.5em 0.5em 0.5em 1.0em;
+    /* Font specifications */
+    font-family: Racing Sans One, Helvetica, Arial;
+    font-weight: 1;
+    font-size: 175%;
+    text-decoration: none;
+    /* Background colour and text colour */
+    background-color: #258;
+    color: white;
+}
+
+
+/* Change the link color on hover */
+.menu-nav>ul>li a:hover {
+    /* Background colour and text colour */
+    background-color: #2262AD;
+    color: white;
+}
+
+
+
+
+/* THE MENU BAR - Appearance the behaviour */
+#menu-bar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
+    overflow-y: scroll;
+}
+
+#menu-bar:hover {
+    right: 0;
+}
+
+#menu-bar {
+    transition: 0.4s;
+}
+
+
+
+/* THE MENU HAMBURGER ICON */
+#menu-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #4C8FEC url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+    background-color: #258;
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+/* CONNECTING THE MENU HAMBURGER ICON TO THE APPEARANCE OF THE MENU BAR */
+a:hover#menu-icon~#menu-bar {
+    right: 0;
+}
+
+
+
+
+
+
+/* THE BUTTON THAT APPEARS BESIDE THE OPEN MENU ON SMALL SCREENS */
+#menu-overlaybutton {
+    display: none;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    /*background: hsla(80, 90%, 40%, 0.9);*/
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
+    overflow-y: scroll;
+}
+
+#menu-overlaybutton {
+    transition: 0.4s;
+}
+
+a:hover#menu-icon~#menu-overlaybutton {
+    display: none;
+}
+
+
+
+
+
+
+/* SETTING RELATING TO PAGE CONENT */
+
+.current {
+    color: #2262AD;
+}
+
+section {
+    margin: 80px auto 40px;
+    max-width: 980px;
+    position: relative;
+    padding: 10px
+}
+
+h1 {
+    font-size: 2em;
+    color: #2262AD;
+    line-height: 1.15em;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #2262AD;
+    line-height: 1.15em;
+    margin: 20px 0;
+    font-family: Racing Sans One, Helvetica, Arial;
+
+}
+
+p {
+    line-height: 1.45em;
+    margin-bottom: 20px;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+    header {
+        position: absolute;
+    }
+
+    #logo {
+        padding-left: 4%;
+        padding-right: 0%;
+        width: 60%;
+        margin: 20px 5px 0px 10px;
+    }
+
+    #title-logo {
+        width: 20px;
+    }
+
+    #title {
+        font-size: 300%;
+    }
+
+    #subtitle {
+        font-size: 80%;
+        white-space: nowrap;
+    }
+
+
+
+
+    #menu-bar {
+        right: -80%;
+        width: 80%;
+    }
+
+    #menu-overlaybutton {
+        position: fixed;
+        left: -20%;
+        width: 20%;
+    }
+
+
+    a:active#menu-icon {
+        background-color: #258;
+        border-radius: 4px 4px 4px 4px;
+    }
+
+    a:hover#menu-icon~#menu-bar {
+        right: 0;
+    }
+
+    a:hover#menu-icon~#menu-overlaybutton {
+        left: 0%;
+        display: block;
+    }
+
+    #menu-bar:hover~#menu-overlaybutton {
+        left: 0%;
+        display: block;
+    }
+
+
+
+    /*
+	nav ul, nav:active ul { 
+
+		display: none;
+		position: absolute;
+		padding: 0px;
+		background: #fff;
+		border: 0px solid #444;
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		border-radius: 0px 0 0px 0px;
+
+	}
+	*/
+
+    /*
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 0px 0;
+		margin: 0;
+
+	}
+	*/
+
+    /*
+	nav:hover ul {
+
+		display: block;
+
+	}
+	*/
+
+
+}
+
+
+/* Section containing styling for the footer */
+.sponsorEntry {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsors-container {
+    display: grid;
+}
+
+@media only screen and (max-width: 700px) {
+    .sponsors-container {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .sponsors-container {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+/*  */
+.footer-container {
+    display: grid;
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+@font-face {
+    font-family: "Racing Sans One";
+    src: url("../fonts/RacingSansOne-Regular.ttf");
+}

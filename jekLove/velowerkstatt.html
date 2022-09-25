@@ -1,0 +1,275 @@
+---
+---
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>VELOVE</title>
+
+	<meta name="description" content="Bike club for the students of Zurich">
+
+	<meta name="author" content="VELOVE">
+
+	<meta name="keywords" content="velove, velowerkstatt, ETH Zurich, VSETH" />
+
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+	<link rel="stylesheet" href="/css/styles.css?version=1.1">
+	<link rel="stylesheet" href="/css/styles_accordian_simple.css?version=1.2">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRacing+Sans+One" rel="stylesheet"> 
+	<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <style>
+        .itemList-container {
+            display: grid;
+        }
+        @media only screen and (max-width: 700px) {
+            .itemList-container {
+                grid-template-columns: repeat(1,1fr)
+            }
+        }
+        @media only screen and (min-width: 700px) {
+            .itemList-container {
+                grid-template-columns: repeat(2,1fr)
+            }
+        }
+
+        .location:hover{
+            transition: transform .2s; /* Animation */
+            transform: scale(1.05);
+        }
+
+    </style>
+
+</head>
+
+
+
+
+
+
+<body>
+
+	{% include templates/headers.html %}
+
+
+	<section>
+
+
+		<!-- <h1> Velowerkstatt open THURSDAYS ONLY during study break and exam period</h1>
+		The Velowerkstatt will open only on Thursdays 17:00-19:00 for the coming weeks. We will return to our normal schedule when the Spring semester starts. We wish everyone great success with any exams they have during this period. -->
+
+
+      	<h1>Who can use the bike workshop?</h1>
+		The bike workshop are open to all students enrolled at ETH, UZH, ZHAW, PHZ, ZHDK.<br>
+        <b>Using the Velowerkstatt is free.</b>
+
+
+		<h1>Where and when to find us</h1>
+
+        <div class="itemList-container">
+
+            <div class="location" style="padding: 10px">
+                <a href="locations/hoenggerberg">
+                    <h2 style="text-align: center"><u>ETH Hönggerberg</u></h2>
+                    <img src="./img/workshop/hoenggerberg_workshop.jpg" alt="Hoenggerberg workshop" style="max-height:20em; max-width: 20em; width: auto;  display: block; margin-left: auto; margin-right: auto;">
+                </a>
+            </div>
+
+
+
+            <div class="location" style="padding: 10px">
+                <a href="locations/waedenswil">
+                    <h2 style="text-align: center"><u>ZHAW Wädenswil</u></h2>
+                    <img src="./img/workshop/waediWorkshopExt.jpg" alt="Waedenswil workshop" style="max-height:20em; max-width: 20em; width: auto;  display: block; margin-left: auto; margin-right: auto;">
+                </a>
+            </div>
+
+
+            <div class="location" style="padding: 10px">
+                <a href="locations/zentrum">
+                    <h2 style="text-align: center"><u>UZH Zentrum</u></h2>
+                    <img src="./img/workshop/zentrumWerkstatt.jpg" alt="Zentrum workshop" style="max-height:20em; max-width: 20em; width: auto;  display: block; margin-left: auto; margin-right: auto;">
+                </a>
+            </div>
+
+            <div class="location" style="padding: 10px">
+                <a href="locations/mobileWerkstatt">
+                    <h2 style="text-align: center"><u>Mobile workshop</u></h2>
+                    <img src="./img/workshop/mobileWorkshop.jpg" alt="Mobile workshop" style="max-height:20em; max-width: 20em; width: auto;  display: block; margin-left: auto; margin-right: auto;">
+                </a>
+            </div>
+
+        </div>
+
+
+
+        <br><br>
+
+		These hours are subject to change, so please always doublecheck the Facebook page before you come by.
+
+
+<!--		<h1>What spare parts are available?</h1>-->
+
+<!--		We stock a selection of spare parts at the Velowerkstatt, check the <a href="shop.php">list of spare parts currently in stock</a>.-->
+
+
+		<h1>Before your visit</h1>
+  		If you already know how to fix your bike, just swing by and feel free to use our tools.
+        In case you are not certain what the problem is or how you can fix it, please have a quick look at the list of common problems below &mdash; about 90 percent of all problems fall into one of these &mdash; click to expand and see some details about each problem.
+
+		<br><br>
+
+		<h3><center>
+			NO PREPARATION NEEDED
+		</center></h3>
+
+
+		<div class="accordion-simple">
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="needair">
+				<label for="needair">
+					Need air in my tyres
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						Just swing past and use our pump.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="minmaxgear">
+				<label for="minmaxgear">
+					Cannot switch to highest/lowest gear
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						Adjusting your derailleur is simple and often solves the problem within minutes. If your cables are worn off, you might want to buy new ones from a bike shop and replace them in the werkstatt (about CHF 3 each)
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="brakesmushy">
+				<label for="brakesmushy">
+					Brakes feel mushy (for rim brakes)
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						Learn how to adjust your brakes. However, often the brake pads, cables or cable housings need to be replaced. You will be able to find brake pads, cables and housings at our Werkstatt.
+					</p>
+				</div>
+			</div>
+
+		</div><!-- .accordion-simple -->
+
+
+		<br><br>
+
+		<h3><center>
+			GET SOME PARTS BEFORE STARTING
+		</center></h3>
+
+		<div class="accordion-simple">
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="newchain">
+				<label for="newchain">
+					I want to replace my chain
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						If you don't know what chain to get and you don't want to bring your bike to the bikeshop, count the nubmer of sprockets on your rear wheel (5,7,8,9,10,11?) and remember the manufacturer of your rear derailleur. This information should suffice. If you don't bring your old chain, you will need to calculate the length of the new chain.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="newtire">
+				<label for="newtire">
+					Need a new inner tube&#x2F;tire
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						Roughly 30 minutes.
+					</p>
+				</div>
+			</div>
+
+		</div><!-- .accordion-simple -->
+
+
+		<br><br>
+
+
+		<h3><center>
+			READ UP ON THE PROCESS (and maybe get some parts)
+		</center></h3>
+
+		<div class="accordion-simple">
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="newbb">
+				<label for="newbb">
+					I want to replace my bottom bracket
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						This is major surgery so it is best come early. Actually, when you read up on the process it may sound easier (especially for some of the newer styles), but you should remember that removing the bottom bracket currently on your bike usually takes some time due to rust and dirst. Be sure to double check that you are looking at instructions for the bottom bracket type that is actually on your bike, this <a href="https://www.parktool.com/blog/repair-help/?area%5B%5D=47">Park Tool repair help page</a> gives a good starting point.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="accordion-simple-checkbox" id="truewheel">
+				<label for="truewheel">
+					My wheel is not true
+				</label>
+				<div class="accordion-simple-content">
+					<p class="accordion-simple-content-body">
+						The procedure is relatively simple but in practice it can be tedious, this <a href="https://www.parktool.com/blog/repair-help/wheel-and-rim-truing">Park Tool repair help page</a> gives good starting point. Time required depends on your craftsmanship. Minutes to hours. Very zen though.
+					</p>
+				</div>
+			</div>
+
+		</div><!-- .accordion-simple -->
+
+
+		<br><br>
+
+		<h3>
+			THINGS YOU CANNOT DO AT THE VELOWERKSTATT
+		</h3>
+  		<ul>
+			<li>Soldering, welding.</li>
+			<li>Repair electric components E-bikes.</li>
+  		</ul>	
+
+		<p>	
+			General recommendation: <b>Do not</b> wear you favourite white clothes (we do have gloves though).
+		</p>
+
+
+
+		<h1>Help us to improve</h1>
+
+		If you have visited our Velowerkstatt and performed repairs on your bike, then help use improve by completing the <a href="/werkstattsurvey" target="_blank">Velowerkstatt Feedback Survey</a>.
+
+
+		<h1>Get inveloved as a helper</h1>
+
+		If you are passionate about helping your fellow students to repair their bikes and keep them rolling, them we are always looking for new helper to run the Velowerkstatt. If this is something for you, then then checkout the <a href="./getinvolved">Get Involved page</a> for more details and registration.
+
+	</section>
+
+    {% include templates/footers.html %}
+</body>
+
+</html>
